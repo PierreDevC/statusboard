@@ -1,0 +1,209 @@
+/* global */
+* { margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+}
+.login-icon {
+  width: 50px;
+  height: 50px;
+  background: #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-weight: bold;
+}
+.login-card input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+.login-card button {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* board layout */
+.board-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 16px;
+}
+.sidebar h3 {
+  font-size: 12px;
+  margin: 12px 0 8px;
+}
+.status-count {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 14px;
+}
+.status-count .count {
+  margin-left: auto;
+  font-weight: bold;
+}
+.history-list {
+  list-style: none;
+  font-size: 12px;
+}
+.history-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+.hist-time { color: #999; }
+
+/* main */
+.board-main {
+  flex: 1;
+  padding: 16px;
+}
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.online-badge {
+  font-size: 12px;
+  background: #eee;
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+.connected-as { font-size: 14px; }
+
+/* members grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.member-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+}
+.member-card.is-me { border: 2px solid #333; }
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.member-info {
+  flex: 1;
+}
+.member-name { font-weight: bold; }
+.badge-you {
+  font-size: 10px;
+  background: #333;
+  color: #fff;
+  padding: 1px 4px;
+  margin-left: 4px;
+}
+.member-role { font-size: 12px; color: #666; }
+.member-status { font-size: 13px; }
+
+/* status buttons */
+.status-buttons {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.btn-status {
+  padding: 4px 8px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.btn-status.active { font-weight: bold; }
+
+/* broadcast */
+.broadcast-section {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-top: 24px;
+}
+.broadcast-input {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+.broadcast-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.broadcast-input button {
+  padding: 8px 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.broadcast-list {
+  list-style: none;
+  font-size: 13px;
+}
+.broadcast-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+.broadcasts-list {
+  margin-top: 16px;
+}
+.broadcasts-list h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.broadcast-message {
+  padding: 8px;
+  margin: 8px 0;
+  background: #f5f5f5;
+  border-left: 3px solid #333;
+}
+.broadcast-message strong {
+  display: block;
+  margin-bottom: 2px;
+}
+.message-time {
+  font-size: 11px;
+  color: #999;
+  margin-left: 8px;
+}
+.broadcast-message p {
+  margin-top: 4px;
+  font-size: 14px;
+}
