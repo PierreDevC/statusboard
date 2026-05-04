@@ -5,7 +5,11 @@ const cors = require('cors');
 
 // initialiser l'app
 const app = express();
-app.use(cors()); // accepter toutes requetes
+const server = http.createServer(app);
+
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://statusboard-five.vercel.app']
+}));
 
 const io = new Server(server, {
   cors: {
@@ -13,10 +17,6 @@ const io = new Server(server, {
     methods: ['GET', 'POST']
   }
 });
-
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://statusboard-five.vercel.app']
-}));
 
 
 // variable qui contient les membres
