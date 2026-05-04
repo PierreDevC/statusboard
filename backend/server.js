@@ -7,16 +7,15 @@ const cors = require('cors');
 const app = express();
 app.use(cors()); // accepter toutes requetes
 
-const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:3000', 'https://statusboard.vercel.app'],
+    origin: ['http://localhost:3000', 'https://statusboard-five.vercel.app'],
     methods: ['GET', 'POST']
   }
 });
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://statusboard.vercel.app']
+  origin: ['http://localhost:3000', 'https://statusboard-five.vercel.app']
 }));
 
 
